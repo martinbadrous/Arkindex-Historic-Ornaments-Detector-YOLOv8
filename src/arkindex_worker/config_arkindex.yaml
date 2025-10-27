@@ -1,0 +1,11 @@
+api_url: "https://YOUR_ARKINDEX_INSTANCE/api"
+api_token: "YOUR_API_TOKEN"
+workspace_id: "YOUR_WORKSPACE_ID"
+download_dir: "downloads"
+model_weights: "runs/ornaments/v8s_baseline/weights/best.pt"
+classes: ["lettrine","illustration","bandeau","vignette"]
+endpoints:
+  list_items: "/workspaces/{workspace_id}/items?status=pending&limit=10"
+  download_image: "/items/{item_id}/content"
+  post_annotations: "/items/{item_id}/annotations"
+  mark_done: "/items/{item_id}/status"
